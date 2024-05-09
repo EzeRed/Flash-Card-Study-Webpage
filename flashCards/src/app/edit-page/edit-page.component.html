@@ -1,0 +1,52 @@
+
+<br>
+<div class="container">
+  <div>
+      <h1>Edit Flash Card</h1>
+      <div [formGroup]="editFlashCardForm" class="input">
+        
+          <mat-form-field class="field-form">
+            <mat-label>Word</mat-label>
+            <input matInput placeholder="Ex. Tulip" value="" formControlName="word" >
+            <mat-error *ngIf="editFlashCardForm.get('word')?.hasError('required')">
+              Please enter a word
+            </mat-error>
+            <mat-error *ngIf="!editFlashCardForm.get('word')?.hasError('minLength')">
+              Minimun length is 1
+            </mat-error>
+          </mat-form-field>
+
+          <br>
+          
+            <mat-form-field class="field-form">
+              <mat-label>Definition</mat-label>
+              <textarea matInput placeholder="Ex. Tulips are spring-blooming..." value="" formControlName = 'definition' rows="4"></textarea>
+              <mat-error *ngIf="editFlashCardForm.get('definition')?.hasError('required')">
+                Please enter Definition
+              </mat-error>
+              <mat-error *ngIf="!editFlashCardForm.get('definition')?.hasError('minLength')">
+                Minimun length is 1
+              </mat-error>
+            </mat-form-field>
+
+            <h2>Catagory</h2>
+          <mat-radio-group aria-label="Select an option" formControlName="radioCatagory">
+            <mat-radio-button  color="primary"value= 'false'>Words to learn</mat-radio-button>
+            <mat-radio-button  color="primary"value= 'true'>Word Learned</mat-radio-button>
+            <mat-error *ngIf="editFlashCardForm.get('radioCatagory')?.hasError('required')">
+              Please choose one
+            </mat-error>
+
+            
+          </mat-radio-group>
+  
+          <button mat-raised-button   color="primary" (click)="submitEdit()" [disabled]="!editFlashCardForm.valid">Submit</button>
+
+            
+      </div>
+      <br>
+      <div *ngIf="added" class="added">
+          <p>Flash Card Updated!</p>
+        </div>
+  </div>
+</div>

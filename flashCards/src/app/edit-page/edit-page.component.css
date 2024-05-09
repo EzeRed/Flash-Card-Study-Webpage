@@ -1,0 +1,55 @@
+h1 {
+    text-align: center;
+    color: rgb(189, 33, 189);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: 800;
+}
+h2 {
+color: rgb(153, 19, 153);
+margin-left: 10px;
+
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+
+  }
+
+
+.link {
+    margin: 0 14px;
+    padding: 0 25px;
+    
+    
+}
+
+.container  {
+    width: auto;
+    height: auto;
+   
+    display: flex;
+    justify-content: center;
+    
+}
+
+.input {
+    box-shadow: 5px 10px 8px    rgb(169, 73, 214);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    border: 5px solid #9e41b8;
+    
+
+}
+.field-form {
+
+    width: 500px;
+}
+.added {
+    margin-top: 15px;
+    font-size: 35px;
+    color: rgb(187, 51, 236);
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+<div class="Container">
+    <div *ngFor="let flashCard of allflashCards" class="flashcardItem">
+
+      <div class="flashcard">
+        <a [routerLink]="['/update/edit', flashCard._id]">
+          <app-display-flash-card [displayCard]="flashCard"></app-display-flash-card>
+        </a>
+      </div>
+
+      <div class="button">
+        <button (click)="deleteFlashCard(flashCard._id)">Delete</button>
+      </div>
+    </div>
+  </div>
+  aa
+  

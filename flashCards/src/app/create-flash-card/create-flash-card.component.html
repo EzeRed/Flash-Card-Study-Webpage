@@ -1,0 +1,41 @@
+
+<div class="container">
+    <div>
+        <h1>Flash Card</h1>
+        <div [formGroup]="flashCardForm" class="input">
+          
+            <mat-form-field class="field-form">
+              <mat-label>Word</mat-label>
+              <input matInput placeholder="Ex. Tulip" value="" formControlName="word" >
+              <mat-error *ngIf="flashCardForm.get('word')?.hasError('required')">
+                Please enter a word
+              </mat-error>
+              <mat-error *ngIf="!flashCardForm.get('word')?.hasError('minLength')">
+                Minimun length is 1
+              </mat-error>
+            </mat-form-field>
+  
+            <br>
+            
+              <mat-form-field class="example-full-width">
+                <mat-label>Definition</mat-label>
+                <textarea matInput placeholder="Ex. Tulips are spring-blooming..." value="" formControlName = 'definition' rows="4"></textarea>
+                <mat-error *ngIf="flashCardForm.get('definition')?.hasError('required')">
+                  Please enter Definition
+                </mat-error>
+                <mat-error *ngIf="!flashCardForm.get('definition')?.hasError('minLength')">
+                  Minimun length is 
+                </mat-error>
+              </mat-form-field>
+    
+
+            <button  mat-raised-button  color="primary" (click)="submitButton()" [disabled]="!flashCardForm.valid">Submit</button>
+
+              
+        </div>
+        <br>
+        <div *ngIf="added" class="added">
+            <p>Flash Card Added!</p>
+          </div>
+    </div>
+</div>

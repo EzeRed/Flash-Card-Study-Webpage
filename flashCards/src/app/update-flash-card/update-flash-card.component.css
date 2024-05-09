@@ -1,0 +1,30 @@
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+ 
+  
+  .flashcard {
+    margin-bottom: 10px; 
+  }
+  
+  .button {
+    
+    
+    display: flex;
+    justify-content: center; 
+  }
+.button button {
+  color: white;
+  cursor: pointer;
+  padding: 5px 35px;
+  border-radius: 4px;
+  background-color: rgb(229, 54, 54)
+
+}
+.button button:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+  

@@ -1,0 +1,24 @@
+.catagories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 5px purple;
+    background-color: #fcf6f6;
+    margin: 0;
+}
+
+li {
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 20px;
+    
+    
+}
+.link1 {
+    color: white;
+    background-color: rgb(190, 3, 190);
+}
+.link2 {
+    color: white;
+    background-color: rgb(152, 0, 152);
+}

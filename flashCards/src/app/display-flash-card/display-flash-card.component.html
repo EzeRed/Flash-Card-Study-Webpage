@@ -1,0 +1,9 @@
+<div class="flashcardBox" (click)="swtchDefinition()">
+    <div class="card">
+        <h1 *ngIf="!showDefinition">{{ displayCard.word }}</h1>
+        
+        <h2 *ngIf="showDefinition">{{ displayCard.definition }}</h2>
+    </div>  
+
+</div>
+

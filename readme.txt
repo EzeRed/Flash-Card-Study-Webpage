@@ -8,6 +8,10 @@ you will see the card has switched to the Words Learned page.
 
 I think everything seems to be working on the application.
 
+Make sure to install modules (npm install)
+
+node . on the api command line.
+
 PORT: 1124
 
 API EndPoints:
